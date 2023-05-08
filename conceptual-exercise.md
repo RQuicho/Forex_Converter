@@ -1,0 +1,53 @@
+### Conceptual Exercise
+
+Answer the following questions below:
+
+- What are important differences between Python and JavaScript?  
+  A: Python runs on servers (not in browser). Used for data science, machine learning, making server, etc. Syntax is cleaner and easier to read. Can express concepts at a high level.
+  JavaScript can be used for front-end and back-end. 
+
+- Given a dictionary like ``{"a": 1, "b": 2}``: , list two ways you
+  can try to get a missing key (like "c") *without* your programming
+  crashing.
+  1. print (dict.get("c", "Key not found"))
+  2. print dict.setdefault("c", "Key not found")
+
+
+- What is a unit test?  
+  A: Testing code in isolated small peices. Tests one "unit" of functionality (i.e. a function or method).
+
+- What is an integration test?  
+  A: Tests that components work together. These are written with unittest framework.
+
+- What is the role of web application framework, like Flask?  
+  A: Set of functions, calsses, etc. that help define:
+    - which requests to respond to (URL)
+    - how to respond to requests (what function does when URL is reached)
+
+  Like a library, but bigger.
+
+- You can pass information to Flask either as a parameter in a route URL
+  (like '/foods/pretzel') or using a URL query param (like
+  'foods?type=pretzel'). How might you choose which one is a better fit
+  for an application?  
+  A: Using a parameter in a route URL directs user to another "location."   
+  Path params are used to identify a specific resource/resources. (https://stackoverflow.com/questions/30967822/when-do-i-use-path-params-vs-query-params-in-a-restful-api)  
+  Using a URL qurey param is usually used for forms or user input. Query params are used to sort/filter those resources. (https://stackoverflow.com/questions/30967822/when-do-i-use-path-params-vs-query-params-in-a-restful-api)
+
+- How do you collect data from a URL placeholder parameter using Flask?  
+  A: request.form["name"]
+
+- How do you collect data from the query string using Flask?  
+  A: request.args("name")
+
+- How do you collect data from the body of the request using Flask?  
+  A: Use a GET and POST requests.
+
+- What is a cookie and what kinds of things are they commonly used for?  
+  A: Cookies are name/string-value pairs sorted by the client(browser). The server tells client to store these. The client sends cookies to the server. (https://lessons.springboard.com/Cookies-Sessions-6e7af9fe88a7434283ab367af51823aa)
+
+- What is the session object in Flask?  
+  A: Contains infor for the current browser, preserve type (lists stay as lists), are "signed" so users can't modify data. (https://lessons.springboard.com/Cookies-Sessions-6e7af9fe88a7434283ab367af51823aa)
+
+- What does Flask's `jsonify()` do?  
+  A: Changes data into JSON format.
