@@ -8,12 +8,12 @@
   <title>Forex Converter</title>
 </head>
 <body>
-  <form>
-    <label for="firstCurrency">Converting from</label>
-    <input type="text" name="firstCurrency">
+  <form action="/convert" method="POST">
+    <label for="firstCurrency">Converting from: </label>
+    <input type="text" name="from">
     <br>
-    <label for="secondCurrency">Converting to</label>
-    <input type="text" name="secondCurrency">
+    <label for="secondCurrency">Converting to: </label>
+    <input type="text" name="to">
     <br>
     <label for="amount">Amount</label>
     <input type="text" name="amount">
