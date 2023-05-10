@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, flash, redirect
+from currency_symbols import CurrencySymbols
 import requests
 import json
 
@@ -21,6 +22,7 @@ def convert():
 	first_curr = request.form['from']
 	second_curr = request.form['to']
 	amount = request.form['amount']
+	symbol = CurrencySymbols.get_symbol(second_curr)
 	response = requests.get(f'https://api.exchangerate.host/convert?from={first_curr}&to={second_curr}&amount={amount}&places=2')
 
 	data = response.json()
@@ -41,9 +43,9 @@ def convert():
 			flash(error, 'error')
 		return redirect('/')
 	else:
-		return render_template('result.html', result=result)
+		return render_template('result.html', result=result, symbol=symbol)
 
-	
+		
 
 	# 1 USD = 0.9100 EUR
 	# 100 USD = 91.00 EUR
