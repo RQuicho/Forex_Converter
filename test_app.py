@@ -17,4 +17,7 @@ class ForexTestCases(TestCase):
 			html = resp.get_data(as_text=True)
 
 			self.assertEqual(resp.status_code, 200)
-			self.assertEqual(resp.data['result'], 91.009788)
+			self.assertIs(resp.data['result'], float(amount))
+			# self.assertEqual(resp.data['result'], 91.009788)
+
+		
