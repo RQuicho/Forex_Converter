@@ -1,0 +1,35 @@
+/* https://www.color-hex.com/color-palette/7098 */
+
+body {
+  background-color: rgb(123,179,255);
+}
+
+form {
+  margin: auto;
+}
+
+input {
+  padding: auto;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: rgb(73,50,103);
+  color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: rgba(183, 128, 255, 0.548);
+  color: black;
+}
+
+.error {
+  background-color: rgb(232,106,240);
+  padding: 10px;
+  border-radius: 7px;
+}
+

@@ -4,6 +4,8 @@
 
 {% block content %}
 
+<h1>CURRENCY CONVERTER</h1>
+
   <form action="/convert" method="POST">
     <label for="firstCurrency">Converting from: </label>
     <input type="text" name="from">
@@ -11,7 +13,7 @@
     <label for="secondCurrency">Converting to: </label>
     <input type="text" name="to">
     <br>
-    <label for="amount">Amount</label>
+    <label for="amount">Amount: </label>
     <input type="text" name="amount">
     <br>
     <button>Convert</button>
