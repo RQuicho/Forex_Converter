@@ -45,13 +45,7 @@ def convert():
 	else:
 		return render_template('result.html', result=result, symbol=symbol)
 
-		
-
-	# 1 USD = 0.9100 EUR
-	# 100 USD = 91.00 EUR
-
-	# 1 USD = 134.97 JPY
-	# 100 USD = 13,495 JPY
+	
 
 	
 
